@@ -1,0 +1,34 @@
+\input{myarticlepreamble}
+\input{yliow}
+\renewcommand\TITLE{File I/O}
+\begin{document}
+\topmatter
+
+\section{Options}
+
+There are many ways to perform C/C++ file I/O:
+\begin{itemize}
+  \li Using C++ fstreams
+  \li Using C file I/O -- fopen, fread, fwrite, etc.
+  \li Using POSIX standard -- open, read, write, etc.
+  \li mmap
+\end{itemize}
+
+\newpage
+\myinput{cfileio.tex}
+
+
+
+\newpage
+\myinput{posix.tex}
+
+WARNING: The problem with POSIX standard is that not all OS are POSIX standard
+compliant.
+So if you use POSIX, you code will probably not be
+portable.
+But if you don't care about portability (and want to write for UNIX/Linux)
+and speed is important, then POSIX is the way to go.
+
+
+
+\end{document}
